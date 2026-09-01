@@ -4,6 +4,8 @@ Australian [Bureau of Meteorology](https://weather.bom.gov.au) weather in the
 Omarchy bar — the same data as the BOM app, instead of wttr.in's interpolated
 guess.
 
+![BOM Weather panel showing Sydney observations, hourly strip and the week ahead](preview.png)
+
 A bar badge shows the current conditions and temperature from your nearest BOM
 station, and lights up when the Bureau has a major warning out for your area.
 Click it for a panel with live observations (feels-like, humidity, wind and
