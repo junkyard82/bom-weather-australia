@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.zuccs.bom-weather",
+  "name": "BOM Weather",
+  "version": "0.1.0",
+  "author": "Daniel Zuccon",
+  "license": "MIT",
+  "description": "Australian Bureau of Meteorology weather in the Omarchy bar: real station observations, the 7-day forecast, hourly rain chances, and desktop notifications for BOM warnings.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "BOM Weather",
+    "description": "Weather for Australia from the Bureau of Meteorology — the data behind the BOM app. Badge shows the current conditions; the panel has observations, today's detail, hourly rain chances, the week ahead, and any active BOM warnings.",
+    "category": "Info",
+    "aliases": ["bom", "bom-weather", "weather-au", "bureau"],
+    "allowMultiple": false,
+    "defaultSection": "center",
+    "defaults": {
+      "location": "",
+      "refreshIntervalSec": 600,
+      "badgeShows": "temp",
+      "notifications": "On"
+    },
+    "schema": [
+      { "key": "location", "type": "string", "label": "Location", "defaultValue": "", "description": "Suburb, town or postcode, e.g. \"Brighton VIC\" or \"3186\". BOM covers Australia only; add the state or postcode when the name is ambiguous — the first match wins." },
+      { "key": "refreshIntervalSec", "type": "integer", "label": "Refresh interval (seconds)", "min": 300, "max": 3600, "step": 60, "defaultValue": 600, "description": "How often to poll the BOM API. Observations update roughly every 10 minutes; 300 s is the floor." },
+      { "key": "badgeShows", "type": "enum", "label": "Temperature on the badge", "options": ["temp", "feels-like"], "defaultValue": "temp", "description": "temp = air temperature at the nearest BOM station. feels-like = BOM's apparent temperature." },
+      { "key": "notifications", "type": "enum", "label": "Notify on BOM warnings", "options": ["On", "Off"], "defaultValue": "On", "description": "Desktop notification when the Bureau issues a new warning for your location (severe weather, storms, fire weather, floods…)." }
+    ]
+  }
+}
