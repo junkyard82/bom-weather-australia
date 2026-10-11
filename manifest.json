@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "io.github.zuccs.bom-weather",
-  "name": "BOM Weather",
+  "id": "io.github.junkyard82.bom-weather-australia",
+  "name": "BOM Weather Australia",
   "version": "0.1.0",
-  "author": "Daniel Zuccon",
+  "author": "junkyard82",
   "license": "MIT",
   "description": "Australian Bureau of Meteorology weather in the Omarchy bar: real station observations, the 7-day forecast, hourly rain chances, and desktop notifications for BOM warnings.",
   "kinds": ["bar-widget"],
@@ -11,10 +11,10 @@
     "barWidget": "BarWidget.qml"
   },
   "barWidget": {
-    "displayName": "BOM Weather",
+    "displayName": "BOM Weather Australia",
     "description": "Weather for Australia from the Bureau of Meteorology — the data behind the BOM app. Badge shows the current conditions; the panel has observations, today's detail, hourly rain chances, the week ahead, and any active BOM warnings.",
     "category": "Info",
-    "aliases": ["bom", "bom-weather", "weather-au", "bureau"],
+    "aliases": ["bom", "weather", "weather-au", "bureau"],
     "allowMultiple": false,
     "defaultSection": "center",
     "defaults": {
